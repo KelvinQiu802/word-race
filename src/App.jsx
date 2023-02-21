@@ -31,7 +31,15 @@ function App() {
 
   let wordList = Lists[selectedLst.book][selectedLst.list];
   if (config.shuffle) {
+    console.log(111);
     wordList = shuffle(wordList);
+  }
+
+  function handleStart() {
+    setPhase(PHASE.start);
+    setConfig((prev) => {
+      return { ...prev, shuffle: false };
+    });
   }
 
   return (
@@ -44,7 +52,7 @@ function App() {
           <button
             className='start'
             disabled={selectedLst.list ? false : true}
-            onClick={() => setPhase(PHASE.start)}
+            onClick={handleStart}
           >
             START
           </button>
