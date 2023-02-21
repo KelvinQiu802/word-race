@@ -31,7 +31,6 @@ function App() {
 
   let wordList = Lists[selectedLst.book][selectedLst.list];
   if (config.shuffle) {
-    console.log(111);
     wordList = shuffle(wordList);
   }
 
