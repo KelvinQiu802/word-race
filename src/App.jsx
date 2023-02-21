@@ -12,10 +12,12 @@ export const PHASE = {
   end: 2,
 };
 
+export const BOOKS = ['CET-4', 'TOEFL'];
+
 function App() {
   const [phase, setPhase] = useState(PHASE.prepare);
   const [selectedLst, setSelectedLst] = useState({
-    book: 'CET-4',
+    book: BOOKS[0],
     list: 'Day1',
   });
   const [config, setConfig] = useState({

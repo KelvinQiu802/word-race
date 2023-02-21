@@ -1,5 +1,6 @@
 import React from 'react';
 import Lists from '../Words';
+import { BOOKS } from '../App';
 
 const CET4 = Lists['CET-4'];
 const TOEFL = Lists.TOEFL;
@@ -12,26 +13,24 @@ function WordList({ lst, setLst }) {
 
   return (
     <div className='word-lst'>
-      <h2>CET-4</h2>
-      {Object.keys(CET4).map((title) => (
-        <h3
-          key={title}
-          style={title == lst.list ? selectedStyle : {}}
-          onClick={() => setLst({ book: 'CET-4', list: title })}
-        >
-          {title}
-        </h3>
-      ))}
-      <h2>TOEFL</h2>
-      {Object.keys(TOEFL).map((title) => (
-        <h3
-          key={title}
-          style={title == lst.list ? selectedStyle : {}}
-          onClick={() => setLst({ book: 'TOEFL', list: title })}
-        >
-          {title}
-        </h3>
-      ))}
+      {BOOKS.map((book) => {
+        return (
+          <>
+            <h2>{book}</h2>
+            {Object.keys(Lists[book]).map((title) => (
+              <h3
+                key={title}
+                style={
+                  title == lst.list && lst.book == book ? selectedStyle : {}
+                }
+                onClick={() => setLst({ book, list: title })}
+              >
+                {title}
+              </h3>
+            ))}
+          </>
+        );
+      })}
     </div>
   );
 }
