@@ -15,7 +15,7 @@ function WordList({ lst, setLst }) {
     <div className='word-lst'>
       {BOOKS.map((book) => {
         return (
-          <>
+          <div key={book}>
             <h2>{book}</h2>
             {Object.keys(Lists[book]).map((title) => (
               <h3
@@ -28,7 +28,7 @@ function WordList({ lst, setLst }) {
                 {title}
               </h3>
             ))}
-          </>
+          </div>
         );
       })}
     </div>

@@ -5,6 +5,7 @@ import Config from './components/Config';
 import Word from './components/Word';
 import Lists from './Words';
 import shuffle from 'just-shuffle';
+import End from './components/End';
 
 export const PHASE = {
   prepare: 0,
@@ -21,10 +22,12 @@ function App() {
     list: 'Day1',
   });
   const [config, setConfig] = useState({
-    timeLimit: '5',
+    timeLimit: '3',
     shuffle: true,
-    showTime: true,
+    showTime: false,
   });
+  const [forget, setForget] = useState([]);
+  const [overtime, setOvertime] = useState([]);
 
   let wordList = Lists[selectedLst.book][selectedLst.list];
   if (config.shuffle) {
@@ -49,12 +52,16 @@ function App() {
       )}
 
       {phase == PHASE.start && (
-        <>
-          <Word wordList={wordList} setPhase={setPhase} />
-        </>
+        <Word
+          wordList={wordList}
+          config={config}
+          setPhase={setPhase}
+          setForget={setForget}
+          setOvertime={setOvertime}
+        />
       )}
 
-      {phase == PHASE.end && <h1>END</h1>}
+      {phase == PHASE.end && <End forget={forget} overtime={overtime} />}
     </div>
   );
 }

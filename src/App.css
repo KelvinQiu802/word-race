@@ -49,3 +49,11 @@
 .word .btns button {
   padding: 5px;
 }
+
+.word h3 {
+  margin-top: 40px;
+}
+
+.word h1 {
+  font-size: 3em;
+}
