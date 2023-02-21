@@ -26,7 +26,7 @@ function WordList({ lst, setLst }) {
       {Object.keys(TOEFL).map((title) => (
         <h3
           key={title}
-          style={{ color: lst == title ? 'blue' : 'black' }}
+          style={title == lst ? selectedStyle : {}}
           onClick={() => setLst(title)}
         >
           {title}

@@ -14,6 +14,8 @@
 .word-lst h3 {
   font-style: italic;
   cursor: pointer;
+  display: inline;
+  padding: 0 6px;
 }
 
 .config {
