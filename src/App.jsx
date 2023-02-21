@@ -11,7 +11,7 @@ const PHASE = {
 
 function App() {
   const [phase, setPhase] = useState(PHASE.prepare);
-  const [selectedLst, setSelectedLst] = useState(null);
+  const [selectedLst, setSelectedLst] = useState({ book: null, list: null });
   const [config, setConfig] = useState({
     timeLimit: '5',
     shuffle: true,
@@ -27,7 +27,7 @@ function App() {
           <Config config={config} setConfig={setConfig} />
           <button
             className='start'
-            disabled={selectedLst ? false : true}
+            disabled={selectedLst.list ? false : true}
             onClick={() => setPhase(PHASE.start)}
           >
             START

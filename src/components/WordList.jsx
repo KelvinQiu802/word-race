@@ -16,8 +16,8 @@ function WordList({ lst, setLst }) {
       {Object.keys(CET4).map((title) => (
         <h3
           key={title}
-          style={title == lst ? selectedStyle : {}}
-          onClick={() => setLst(title)}
+          style={title == lst.list ? selectedStyle : {}}
+          onClick={() => setLst({ book: 'CET-4', list: title })}
         >
           {title}
         </h3>
@@ -26,8 +26,8 @@ function WordList({ lst, setLst }) {
       {Object.keys(TOEFL).map((title) => (
         <h3
           key={title}
-          style={title == lst ? selectedStyle : {}}
-          onClick={() => setLst(title)}
+          style={title == lst.list ? selectedStyle : {}}
+          onClick={() => setLst({ book: 'TOEFL', list: title })}
         >
           {title}
         </h3>
