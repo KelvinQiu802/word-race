@@ -15,3 +15,11 @@
   font-style: italic;
   cursor: pointer;
 }
+
+.config {
+  margin-top: 20px;
+}
+
+.config div {
+  margin-bottom: 5px;
+}
