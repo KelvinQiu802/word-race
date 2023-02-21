@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.word-lst {
+  border: 1px solid black;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.word-lst h3 {
+  font-style: italic;
+  cursor: pointer;
+}
