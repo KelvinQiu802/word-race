@@ -11,6 +11,10 @@
   padding: 10px;
 }
 
+.word-lst h2 {
+  margin: 8px 0;
+}
+
 .word-lst h3 {
   font-style: italic;
   cursor: pointer;

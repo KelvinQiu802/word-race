@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>{`<Word Race>`}</h1>
+      <h1>{`<Word Race />`}</h1>
       {phase == PHASE.prepare && (
         <>
           <WordList lst={selectedLst} setLst={setSelectedLst} />
