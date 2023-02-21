@@ -4,6 +4,7 @@ import WordList from './components/WordList';
 import Config from './components/Config';
 import Word from './components/Word';
 import Lists from './Words';
+import shuffle from 'just-shuffle';
 
 export const PHASE = {
   prepare: 0,
@@ -23,9 +24,9 @@ function App() {
     showTime: true,
   });
 
-  const wordList = Lists[selectedLst.book][selectedLst.list];
+  let wordList = Lists[selectedLst.book][selectedLst.list];
   if (config.shuffle) {
-    // TODO Shuffle
+    wordList = shuffle(wordList);
   }
 
   return (

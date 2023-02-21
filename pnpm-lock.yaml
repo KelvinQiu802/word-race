@@ -4,11 +4,13 @@ specifiers:
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
   '@vitejs/plugin-react': ^3.1.0
+  just-shuffle: ^4.2.0
   react: ^18.2.0
   react-dom: ^18.2.0
   vite: ^4.1.0
 
 dependencies:
+  just-shuffle: 4.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -681,6 +683,10 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
     dev: true
+
+  /just-shuffle/4.2.0:
+    resolution: {integrity: sha512-/dDmNseAWLf3XkFY9xf3/BdQoiy27LNUy/7uG4zdSAX526nIHMYPYeJ4pN4lT1/pgNEX8XCXPtUB6gJqTpBEng==}
+    dev: false
 
   /loose-envify/1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
