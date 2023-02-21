@@ -1437,7 +1437,7 @@ export default {
     ],
   },
   TOEFL: {
-    DDay1: [
+    Day1: [
       'pastel',
       'cultivate',
       'substitute n/v',
