@@ -33,6 +33,9 @@ function App() {
 
   function handleStart() {
     setPhase(PHASE.start);
+    setConfig((prev) => {
+      return { ...prev, shuffle: false };
+    });
   }
 
   return (
