@@ -30,15 +30,9 @@ function App() {
   const [overtime, setOvertime] = useState([]);
 
   let wordList = Lists[selectedLst.book][selectedLst.list];
-  if (config.shuffle) {
-    wordList = shuffle(wordList);
-  }
 
   function handleStart() {
     setPhase(PHASE.start);
-    setConfig((prev) => {
-      return { ...prev, shuffle: false };
-    });
   }
 
   return (
@@ -60,7 +54,7 @@ function App() {
 
       {phase == PHASE.start && (
         <Word
-          wordList={wordList}
+          wordList={config.shuffle ? shuffle(wordList) : wordList}
           config={config}
           setPhase={setPhase}
           setForget={setForget}
